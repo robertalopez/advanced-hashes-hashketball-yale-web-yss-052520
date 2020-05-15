@@ -162,9 +162,9 @@ def team_colors(name)
   game_hash.each do |loc, team_info|
     team_info.each do |attribute, info|
       binding.pry 
-    if attribute == :team_name && attribute[info] == name
-      binding.pry
-      return attribute[:colors]
+    if attribute == :team_name && info == name
+      #binding.pry
+      return team_info[:colors]
       #binding.pry
     end 
     end
