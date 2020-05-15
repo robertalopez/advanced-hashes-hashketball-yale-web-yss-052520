@@ -160,8 +160,9 @@ end
 def team_colors(name)
   require 'pry'
   game_hash.each do |loc, team_info|
+    team_info.each do |attribute, info|
     binding.pry 
-    if team_info == :team_name && loc[team_info] == name
+    if attribute == :team_name && attribute[info] == name
       binding.pry 
     end
   end 
