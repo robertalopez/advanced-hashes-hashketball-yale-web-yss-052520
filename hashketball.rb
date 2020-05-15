@@ -129,5 +129,7 @@ end
 # Write code here
 
 def num_points_scored(name)
-  game_hash.each do |loc, info|
-    info.find 
+  game_hash.each do |loc, team_info|
+    team_info.each do |attribute, info|
+      info.find do |nombre|
+        
