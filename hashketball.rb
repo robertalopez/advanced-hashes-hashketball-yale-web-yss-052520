@@ -132,4 +132,9 @@ def num_points_scored(name)
   game_hash.each do |loc, team_info|
     team_info.each do |attribute, info|
       info.find do |nombre|
-        
+        nombre == name 
+        game_hash[loc][team_info][:points]
+      end 
+    end
+  end 
+end 
