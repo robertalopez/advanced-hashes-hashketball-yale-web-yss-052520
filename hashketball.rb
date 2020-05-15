@@ -213,6 +213,18 @@ def player_stats(name)
 end
 
 def big_shoe_rebounds
+  game_hash.each do |loc, team_info|
+    team_info.each do |attribute, info|
+      if attribute == :players 
+        info.each do |nombre|
+          if nombre[:player_name] == "Mason Plumlee"
+            return nombre[shoe]
+          end
+        end 
+      end 
+    end 
+  end
+end 
   
     
         
