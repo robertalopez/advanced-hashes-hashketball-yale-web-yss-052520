@@ -184,9 +184,11 @@ def player_numbers(name)
   numbers = []
   game_hash.each do |loc, team_info|
     team_info.each do |attribute, info|
+      if attribute == :team_name && info == name 
       if attribute == :players
         info.each do |stat|
              numbers << stat[:number]
+           end 
         end 
       end
     end
