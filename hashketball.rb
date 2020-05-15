@@ -203,7 +203,7 @@ def player_stats(name)
     team_info.each do |attribute, info|
       if attribute == :players
         more.info each do |nombre|
-          if nombre|:player_name| == name 
+          if nombre[:player_name] == name 
             return nombre 
           end 
         end
@@ -211,6 +211,5 @@ def player_stats(name)
     end 
   end 
 end
-end 
     
         
