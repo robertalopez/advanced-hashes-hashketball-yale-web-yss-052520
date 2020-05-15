@@ -189,7 +189,6 @@ def player_numbers(name)
           if stat == :number
             numbers << info[stat]
             binding.pry 
-          end 
         end 
       end
     end
