@@ -173,7 +173,7 @@ def team_names
   game_hash.each do |loc, team_info|
     team_info.each do |attribute, info|
       if attribute == :team_name
-        name_array << team_info[:team_name]
+        names << team_info[:team_name]
       end
     end
   end
