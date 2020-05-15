@@ -135,7 +135,7 @@ def num_points_scored(name)
       if attribute == :players
         more_info.each do |nombre|
           if nombre[:player_name] == name
-            nombre[:points]
+           return nombre[:points]
           end
         end 
       end 
