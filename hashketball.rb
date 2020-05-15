@@ -163,7 +163,8 @@ def team_colors(name)
     team_info.each do |attribute, info|
     binding.pry 
     if attribute == :team_name && attribute[info] == name
-      binding.pry 
+      binding.pry
+    end 
     end
   end 
 end
