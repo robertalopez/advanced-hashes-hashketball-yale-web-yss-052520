@@ -167,4 +167,17 @@ def team_colors(name)
     end
   end 
 end
+
+def team_names(my_hash)
+  name_array = []
+  game_hash.each do |loc, team_info|
+    team_info.each do |attribute, info|
+      if attribute == :team_name
+        name_array << team_info[:team_name]
+      end
+    end
+  end
+  name_array
+end 
+    
         
