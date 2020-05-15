@@ -202,7 +202,7 @@ def player_stats(name)
   game_hash.each do |loc, team_info|
     team_info.each do |attribute, info|
       if attribute == :players
-        more.info each do |nombre|
+        info.each do |nombre|
           if nombre[:player_name] == name 
             return nombre 
           end 
