@@ -218,7 +218,7 @@ def big_shoe_rebounds
       if attribute == :players 
         info.each do |nombre|
           if nombre[:player_name] == "Mason Plumlee"
-            return nombre[:shoe]
+            return nombre[:rebounds]
           end
         end 
       end 
