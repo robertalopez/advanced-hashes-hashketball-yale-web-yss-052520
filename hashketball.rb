@@ -187,7 +187,6 @@ def player_numbers(name)
       if attribute == :players
         info.each do |stat|
              numbers << stat[:number]
-            binding.pry 
         end 
       end
     end
