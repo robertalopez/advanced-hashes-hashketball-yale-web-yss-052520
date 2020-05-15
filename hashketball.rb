@@ -180,6 +180,19 @@ def team_names
   return names
 end 
 
-
+def player_numbers(name)
+  numbers = []
+  game_hash.each do |loc, team_info|
+    team_info.each do |attribute, info|
+      if attribute == :players 
+        info.each do |stat, more_info|
+          if stat == :number
+            numbers << info[stat]
+          end 
+        end 
+      end
+    end
+  end 
+end 
     
         
