@@ -186,7 +186,7 @@ def player_numbers(name)
     team_info.each do |attribute, info|
       if attribute == :players
         info.each do [stat]
-             numbers << stat[number]
+             numbers << stat[:number]
             binding.pry 
         end 
       end
