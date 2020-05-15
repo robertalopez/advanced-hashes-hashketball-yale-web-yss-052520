@@ -160,9 +160,10 @@ end
 def team_colors(name)
   game_hash.each do |loc, team_info|
     if loc[:team_name] == name 
-      return loc[:colors]
+      loc[:colors]
       binding.pry 
     end
   end
+  loc[:colors]
 end
         
