@@ -1,4 +1,5 @@
 # Write your code below game_hash
+require 'pry'
 def game_hash
   {
     home: {
@@ -127,3 +128,103 @@ def game_hash
 end
 
 # Write code here
+
+def num_points_scored(name)
+  game_hash.each do |loc, team_info|
+    team_info.each do |attribute, more_info|
+      if attribute == :players
+        more_info.each do |nombre|
+          if nombre[:player_name] == name
+           return nombre[:points]
+          end
+        end 
+      end 
+    end
+  end 
+end
+
+def shoe_size(name)
+  game_hash.each do |loc, team_info|
+    team_info.each do |attribute, more_info|
+      if attribute == :players
+        more_info.each do |nombre|
+          if nombre[:player_name] == name
+            return nombre[:shoe]
+          end
+        end
+      end
+    end
+  end
+end 
+
+def team_colors(name)
+  require 'pry'
+  game_hash.each do |loc, team_info|
+    team_info.each do |attribute, info|
+    if attribute == :team_name && info == name
+      return team_info[:colors]
+    end 
+    end
+  end 
+end
+
+def team_names
+  names = []
+  game_hash.each do |loc, team_info|
+    team_info.each do |attribute, info|
+      if attribute == :team_name
+        names << team_info[:team_name]
+      end
+    end
+  end
+  return names
+end 
+
+def player_numbers(name)
+  numbers = []
+  game_hash.each do |loc, team_info|
+    team_info.each do |attribute, info|
+      if attribute == :team_name && info == name 
+        team_info.each do |attribute, info|
+      if attribute == :players
+        info.each do |stat|
+             numbers << stat[:number]
+           end 
+           end 
+        end 
+      end
+    end
+  end 
+  return numbers 
+end 
+
+def player_stats(name)
+  game_hash.each do |loc, team_info|
+    team_info.each do |attribute, info|
+      if attribute == :players
+        info.each do |nombre|
+          if nombre[:player_name] == name 
+            return nombre 
+          end 
+        end
+      end 
+    end 
+  end 
+end
+
+def big_shoe_rebounds
+  game_hash.each do |loc, team_info|
+    team_info.each do |attribute, info|
+      if attribute == :players 
+        info.each do |nombre|
+          if nombre[:player_name] == "Mason Plumlee"
+            return nombre[:rebounds]
+          end
+        end 
+      end 
+    end 
+  end
+end 
+  
+    
+        
